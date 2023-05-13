@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { navigate } from "@reach/router";
+// import { navigate } from "@reach/router";
 import { Fade, LightSpeed } from "react-reveal";
 
 import Timeline from "../Components/Timeline";
@@ -17,7 +17,7 @@ class History extends Component {
     );
 
     const backArrow = (
-      <div onClick={() => navigate("/")}>
+      <div onClick={() => window.location.href = "https://latino.mit.edu"}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="back-arrow"
