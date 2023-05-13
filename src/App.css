@@ -1,38 +1,237 @@
-.App {
-  text-align: center;
+/*
+=====================================================================
+*   Ceevee v1.0 Layout Stylesheet
+*   url: styleshout.com
+*   03-18-2014
+=====================================================================
+
+   TOC:
+   a. General Styles
+   b. Header Styles
+   c. About Section
+   d. Portfolio/Team Section
+   e. Member Orgs Section
+   f. Contact Section
+   g. Footer
+   h. History Page
+
+===================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* a. General Styles
+/* ------------------------------------------------------------------ */
+
+body { background: #0f0f0f; }
+
+.text-gray { color: rgb(161, 161, 161)}
+
+/* ------------------------------------------------------------------ */
+/* b. Header Styles
+/* ------------------------------------------------------------------ */
+
+header {
+   position: relative;
+   height: 800px;
+   min-height: 500px;
+   width: 100%;
+   
+   text-align: center;
+   overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* vertically center banner section */
+header:before {
+   content: '';
+   display: inline-block;
+   vertical-align: middle;
+   height: 100%;
+}
+header .banner {
+   display: inline-block;
+   vertical-align: middle;
+   margin: 0 auto;
+   width: 85%;
+   padding-bottom: 30px;
+   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header .banner-text { width: 100%; }
+header .banner-text h1 {
+   font: 90px/1.1em 'opensans-bold', sans-serif;
+   color: #fff;
+   letter-spacing: -2px;
+   margin: 0 auto 18px auto;
+}
+header .banner-text h3 {
+   font: 18px/1.9em 'librebaskerville-regular', serif;
+   color: #ddd;
+   margin: 0 auto;
+   width: 70%;
+}
+header .banner-text h3 span,
+header .banner-text h3 a {
+   color: #fff;
+}
+header .banner-text hr {
+   width: 60%;
+   margin: 18px auto 24px auto;
+   border-color: #2F2D2E;
+   border-color: rgba(150, 150, 150, .1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* header social links */
+header .social {
+   margin: 24px 0;
+   padding: 0;
+   font-size: 30px;
+}
+header .social li {
+   display: inline-block;
+   margin: 0 15px;
+   padding: 0;
+}
+header .social li a { color: #fff; }
+header .social li a:hover { color: #0762f9; }
+
+/* scrolldown link */
+header .scrolldown a {
+   position: absolute;
+   bottom: 30px;
+   left: 50%;
+   margin-left: -29px;
+   color: #fff;
+   display: block;
+   height: 42px;
+   width: 42px;
+   font-size: 42px;
+   line-height: 42px;
+   color: #fff;
+   border-radius: 100%;
+
+   -webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+   -o-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
+}
+header .scrolldown a:hover { color: #0762f9; }
+
+/* ------------------------------------------------------------------ */
+/* h. History Page
+/* ------------------------------------------------------------------ */
+.history-page {
+   background-color: rgb(85, 85, 203);
+   padding-top: 20px;
+   padding-bottom: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.history-page h1 {
+   font: 50px 'opensans-bold', sans-serif;
+   color: rgb(255, 255, 255);
+   margin-bottom: 36px;
+   text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.history-title {
+   font-size: 1.5em;
+   color: white;
+   text-align: center;
+}
+
+.history-timeline-title {
+   font-size: 2.5em;
+   color: white;
+   text-align: center;
+   margin-top: 10rem;
+}
+
+.date {
+   /* font: 100rem 'opensans-bold', sans-serif; */
+   font-size: 50px !important;
+   top: -2rem !important;
+   color: rgb(212, 212, 212);
+}
+
+.history-img img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+   border-radius: 1rem;
+}
+
+.sources {
+   font: 15px 'opensans-bold', sans-serif !important;
+   color: rgb(133, 133, 133);
+}
+
+.history-about {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0 15%;
+}
+
+.history-card {
+   color: #000;
+   background-color: whitesmoke;
+   padding: 2rem 2rem 1rem;
+   margin: 1rem;
+   border-radius: 3rem;
+   width: 100%;
+}
+
+.history-card > i {
+   color: #727272;
+   text-align: right;
+   display: block;
+   margin-top: 1em;
+   margin-left: auto;
+   width: 50%;
+}
+
+.history-question {
+   font: 2rem sans-serif;
+   color: #575757;
+   margin: 2rem 0 0 0;
+}
+
+.history-answer {
+   margin: 0 0 0 0;
+   padding: 0;
+}
+
+.history-video {
+   width: 100%;
+   height: 500px;
+   border-radius: 3rem;
+}
+
+.img-left img {
+   float: left;
+   width: 40%;
+   border-radius: 2rem;
+   margin: 2rem 2rem 0;
+}
+
+.img-right img {
+   float: right;
+   width: 40%;
+   border-radius: 2rem;
+   margin: 2rem 2rem 0;
+}
+
+.back-arrow {
+   width: 5rem;
+   height: 5rem;
+   fill: gainsboro;
+   margin-left: 10px;
+}
+
+.back-arrow:hover {
+   cursor: pointer;
+   fill: rgb(168, 168, 168);
+}
+
+.interviewee {
+   margin-bottom: 5rem;
 }
